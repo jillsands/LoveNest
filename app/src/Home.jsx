@@ -122,10 +122,12 @@ function Home() {
             <li> supervising/keeping track of completion</li>
           </ul>
         </StyledListContainer>
-        At this stage, you should want to consider your “Why” in doing each
-        task. How does this task contribute to your- not anyone else’s- values?
-        When you think about it this way, is it still important? If not, delete
-        it. You can also choose to add some tasks, but be sure to leave no card
+        (Reich-Stiebert et al.)
+        <br />
+        At this stage, consider your “Why” in doing each task. How
+        does this task contribute to your- not anyone else’s- values? When you
+        think about it this way, is it still important? If not, delete it. You
+        can also choose to add some tasks, but be sure to leave no card
         unsorted!
       </Row>
     </Container>
@@ -171,6 +173,7 @@ function Home() {
             </li>
           </ul>
         </StyledListContainer>
+        <p> (Rodsky) </p>
       </Row>
     </Container>
   );
@@ -192,7 +195,7 @@ function Home() {
     return (
       <Container className='text-center'>
         <Row>
-          <p> Based on your selection, it seems...</p>
+          <h5> Based on your selection, it seems...</h5>
           <StyledListContainer>
             <ul>
               <li>
@@ -209,10 +212,10 @@ function Home() {
               </li>
             </ul>
           </StyledListContainer>
-          <p> Fixing an unjust division of labor can lead to... </p>
+          <h5> Fixing an unjust division of labor can lead to... </h5>
           <StyledListContainer>
             <ul>
-              <li>A relationship with less nagging and resentment</li>
+              <li>A happier relationship with less nagging and resentment</li>
               <li>
                 More time for each partner to focus on their passions and
                 self-care
@@ -224,6 +227,8 @@ function Home() {
               <li>Being a more present and active friend and family member </li>
             </ul>
           </StyledListContainer>
+          (Reich-Stiebert et al.; Rodsky; Saraswati et al.)
+          <br />
           Now we'll work towards valuing each partner's time equally, no matter
           your outside responsibilities, or what's "easier." For the
           less-burdened partner, you will be asked to take on more. For the
@@ -277,9 +282,9 @@ function Home() {
                 <>
                   Happy with your sort? <br />
                   Try out your current selection for a week! Ideally, try to
-                  have a weekly check-in where you can share feedback.
-                  Remember, task ownership can- and should, in the more
-                  demanding cases- be changed from week to week!
+                  have a weekly check-in where you can share feedback. Remember,
+                  task ownership can- and should, in the more demanding cases-
+                  be changed from week to week!
                   {items && (
                     <PDFDownloadLink
                       document={
@@ -292,9 +297,7 @@ function Home() {
                       fileName='LoveNest.pdf'
                     >
                       {({ loading, error }) =>
-                        !(loading || error) && (
-                          <Button title='Download Tasks' />
-                        )
+                        !(loading || error) && <Button title='Download Tasks' />
                       }
                     </PDFDownloadLink>
                   )}

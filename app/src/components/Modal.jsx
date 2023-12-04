@@ -3,7 +3,10 @@ import {
   DialogActions,
   DialogContent,
   DialogTitle,
+  IconButton,
 } from '@mui/material';
+
+import CloseIcon from '@mui/icons-material/Close';
 
 function Modal({ open, onClose, title, submitBtn, children }) {
   return (
@@ -28,12 +31,19 @@ function Modal({ open, onClose, title, submitBtn, children }) {
       >
         {title}
       </DialogTitle>
+      <IconButton
+        aria-label='close'
+        onClick={onClose}
+        sx={{
+          position: 'absolute',
+          left: 4,
+          top: 4,
+        }}
+      >
+        <CloseIcon />
+      </IconButton>
       <DialogContent>{children}</DialogContent>
-      {submitBtn && (
-        <DialogActions>
-          {submitBtn}
-        </DialogActions>
-      )}
+      {submitBtn && <DialogActions>{submitBtn}</DialogActions>}
     </Dialog>
   );
 }
