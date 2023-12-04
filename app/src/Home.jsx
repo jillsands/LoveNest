@@ -111,9 +111,9 @@ function Home() {
       <h4> Round 1 </h4>
       <Row>
         <p>
-          Enter your names in the form and begin sorting each card based on
-          which partner currently performs the <strong> mental labor </strong>{' '}
-          that is required for a task, that is:
+          Enter your names and begin sorting each card based on which partner
+          currently performs the <strong> mental labor </strong> that is
+          required for a task, that is:
         </p>
         <StyledListContainer>
           <ul>
@@ -124,11 +124,10 @@ function Home() {
         </StyledListContainer>
         (Reich-Stiebert et al.)
         <br />
-        At this stage, consider your “Why” in doing each task. How
-        does this task contribute to your- not anyone else’s- values? When you
-        think about it this way, is it still important? If not, delete it. You
-        can also choose to add some tasks, but be sure to leave no card
-        unsorted!
+        At this stage, consider your “Why” in doing each task. How does this
+        task contribute to your- not anyone else’s- values? When you think about
+        it this way, is it still important? If not, delete it. You can also
+        choose to add tasks, but be sure to leave no card unsorted!
       </Row>
     </Container>
   );
@@ -200,7 +199,7 @@ function Home() {
             <ul>
               <li>
                 {p1TotalCount === p2TotalCount
-                  ? 'Each partner performs the mental labor for the same number of tasks! You may still want to continue the game to further encourage a fair split in your  relationship. '
+                  ? 'Each partner performs the mental labor for the same number of tasks! You may still want to continue the game to further encourage a fair split in your relationship. '
                   : (p1TotalCount > p2TotalCount ? name1 : name2) +
                     ' takes on the mental load for the majority of tasks'}
               </li>
@@ -230,10 +229,10 @@ function Home() {
           (Reich-Stiebert et al.; Rodsky; Saraswati et al.)
           <br />
           Now we'll work towards valuing each partner's time equally, no matter
-          your outside responsibilities, or what's "easier." For the
-          less-burdened partner, you will be asked to take on more. For the
-          load-bearing partner, you will be asked to hand some control to your
-          partner and trust in their abilities.
+          your outside responsibilities. For the less-burdened partner, you will
+          be asked to take on more. For the load-bearing partner, you will be
+          asked to hand some control to your partner and trust in their
+          abilities.
         </Row>
       </Container>
     );
