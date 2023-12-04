@@ -12,7 +12,7 @@ const StyledCardHolder = styled(Col)`
   ${({ isOver }) =>
     isOver &&
     `
-    background: #52B788;;
+    background: #52B788;
   `}
 `;
 
@@ -21,10 +21,8 @@ function CardHolder({ styled = false, title, children }) {
     accept: 'Card',
     drop: () => ({ name: title }),
     collect: (monitor) => ({
-      isOver: monitor.isOver(),
-      canDrop: monitor.canDrop(),
+      isOver: monitor.isOver()
     }),
-    canDrop: (item) => true,
   });
 
   return styled ? (

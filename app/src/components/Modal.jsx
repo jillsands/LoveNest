@@ -5,13 +5,12 @@ import {
   DialogTitle,
 } from '@mui/material';
 
-import Button from './Button';
-
-function Modal({ open, onClose, title, error = false, submitBtn, children }) {
+function Modal({ open, onClose, title, submitBtn, children }) {
   return (
     <Dialog
       open={open}
       onClose={onClose}
+      transitionDuration={300}
       PaperProps={{
         style: {
           borderRadius: 24,
@@ -29,15 +28,9 @@ function Modal({ open, onClose, title, error = false, submitBtn, children }) {
       >
         {title}
       </DialogTitle>
-      <DialogContent>
-        {children}
-        {error && (
-          <div>Please make sure all fields have been properly filled.</div>
-        )}
-      </DialogContent>
+      <DialogContent>{children}</DialogContent>
       {submitBtn && (
         <DialogActions>
-          <Button title='Go Back' autoFocus onClick={onClose} />
           {submitBtn}
         </DialogActions>
       )}
